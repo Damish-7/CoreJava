@@ -250,6 +250,117 @@ public class runner {
         DigitalLibrary digitalLibrary2 = (DigitalLibrary) digitalLibrary; // Downcasting
         digitalLibrary2.downloadBook();
 
+        Zoo zoo = new SafariZone(); // Upcasting
+        zoo.feedAnimals();
+
+        SafariZone safari = new SafariZone(); // Normal object
+        safari.feedAnimals();
+
+        SafariZone safari2 = (SafariZone) safari; // Downcasting
+        safari2.startRide();
+
+        Academy academy = new TennisAcademy(); // Upcasting
+        academy.conductTraining();
+
+        TennisAcademy tennis = new TennisAcademy(); // Normal object
+        tennis.conductTraining();
+
+        TennisAcademy tennis2 = (TennisAcademy) tennis; // Downcasting
+        tennis2.organizeTournament();
+
+        Attraction attraction = new RollerCoaster(); // Upcasting
+        attraction.startRide();
+
+        RollerCoaster coaster = new RollerCoaster(); // Normal object
+        coaster.startRide();
+
+        RollerCoaster coaster2 = (RollerCoaster) coaster; // Downcasting
+        coaster2.performLoop();
+
+        RoomService service1 = new LuxuryService(); // Upcasting
+        service1.requestService();
+
+        LuxuryService luxury = new LuxuryService(); // Normal object
+        luxury.requestService();
+
+        LuxuryService luxury2 = (LuxuryService) luxury; // Downcasting
+        luxury2.serveChampagne();
+
+        Tracker tracker = new AnimalTracker(); // Upcasting
+        tracker.track();
+
+        AnimalTracker animal2 = new AnimalTracker(); // Normal object
+        animal2.track();
+
+        AnimalTracker animal3 = (AnimalTracker) animal2; // Downcasting
+        animal3.analyzeBehavior();
+
+        Drone drone = new SurveillanceDrone(); // Upcasting
+        drone.fly();
+
+        SurveillanceDrone sd = new SurveillanceDrone(); // Normal object
+        sd.fly();
+
+        SurveillanceDrone sd2 = (SurveillanceDrone) sd; // Downcasting
+        sd2.captureVideo();
+
+        Factory factory = new AutomatedFactory(); // Upcasting
+        factory.startProduction();
+
+        AutomatedFactory automated = new AutomatedFactory(); // Normal object
+        automated.startProduction();
+
+        AutomatedFactory automated2 = (AutomatedFactory) automated; // Downcasting
+        automated2.scheduleMaintenance();
+
+        Patient patient = new Doctor(); // Upcasting
+        patient.register();
+
+        Doctor doctor = new Doctor(); // Normal object
+        doctor.register();
+
+        Doctor doctor2 = (Doctor) doctor; // Downcasting
+        doctor2.prescribeMedication();
+
+        Cart cart = new ShoppingCart(); // Upcasting
+        cart.addItem();
+
+        ShoppingCart shoppingCart = new ShoppingCart(); // Normal object
+        shoppingCart.addItem();
+
+        ShoppingCart shoppingCart2 = (ShoppingCart) shoppingCart; // Downcasting
+        shoppingCart2.applyDiscount();
+
+        ParkingSpot spot = new PremiumParkingSpot(); // Upcasting
+        spot.parkCar();
+
+        PremiumParkingSpot premiumSpot = new PremiumParkingSpot(); // Normal object
+        premiumSpot.parkCar();
+
+        PremiumParkingSpot premiumSpot2 = (PremiumParkingSpot) premiumSpot; // Downcasting
+        premiumSpot2.addChargingStation();
+
+        Room room = new ConferenceRoom(); // Upcasting
+        room.bookRoom();
+
+        ConferenceRoom conferenceRoom = new ConferenceRoom(); // Normal object
+        conferenceRoom.bookRoom();
+
+        ConferenceRoom conferenceRoom2 = (ConferenceRoom) conferenceRoom; // Downcasting
+        conferenceRoom2.reserveEquipment();
+
+        Voter voter = new OnlineVoter("Alice", "VoteOnline"); // Upcasting
+        voter.vote();
+
+        OnlineVoter onlineVoter = new OnlineVoter("Bob", "SecureVote"); // Normal object
+        onlineVoter.vote();
+
+        OnlineVoter onlineVoter2 = (OnlineVoter) onlineVoter; // Downcasting
+        onlineVoter2.checkSecurity();
+
+
+
+
 
 
     }
