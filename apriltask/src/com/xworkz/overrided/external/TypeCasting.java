@@ -142,6 +142,60 @@ public class TypeCasting {
             }
         }
     }
+    public void Transport(Transport transport) {
+        if (transport != null) {
+            transport.move();
+            if (transport instanceof Train) {
+                Train train= (Train) transport;
+                train.move();
+            }
+        }
+    }
+    public void Attraction(Attraction attraction) {
+        if (attraction != null) {
+            attraction.startRide();
+            if (attraction instanceof RollerCoaster) {
+                RollerCoaster rollerCoaster= (RollerCoaster) attraction;
+                rollerCoaster.startRide();
+            }
+        }
+    }
+    public void Creature(Creature creature) {
+        if (creature != null) {
+            creature.makeSound();
+            if (creature instanceof Dragon) {
+                Dragon dragon= (Dragon) creature;
+                dragon.makeSound();
+            }
+        }
+    }
+    public void Resturant(Restaurant restaurant) {
+        if (restaurant != null) {
+            restaurant.serveFood();
+            if (restaurant instanceof FineDining) {
+                FineDining fineDining= (FineDining) restaurant;
+                fineDining.serveFood();
+            }
+        }
+    }
+    public void Player(Player player) {
+        if (player != null) {
+            player.play();
+            if (player instanceof FootballPlayer) {
+                FootballPlayer footballPlayer= (FootballPlayer) player;
+                footballPlayer.play();
+            }
+        }
+    }
+    public void HomeDevice(HomeDevice homeDevice) {
+        if (homeDevice != null) {
+            homeDevice.turnOff();
+            if (homeDevice instanceof SmartLight) {
+                SmartLight smartLight= (SmartLight) homeDevice;
+                smartLight.turnOff();
+            }
+        }
+    }
 
 
 
