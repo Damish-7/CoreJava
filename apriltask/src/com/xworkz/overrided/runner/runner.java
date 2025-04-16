@@ -358,10 +358,84 @@ public class runner {
         OnlineVoter onlineVoter2 = (OnlineVoter) onlineVoter; // Downcasting
         onlineVoter2.checkSecurity();
 
+        Laptop laptop = new Keyboard();  // Upcasting
+        laptop.coding();                // Calls overridden method in Keyboard
+        laptop.working();               // Inherited method from Laptop
 
+        Keyboard keyboard = new Keyboard();  // Direct object creation
+        keyboard.coding();                  // Calls overridden method
+        keyboard.working();                 // Inherited method from Laptop
+        keyboard.conductwork();            // Method specific to Keyboard
 
+        Keyboard keyboard2 = (Keyboard) laptop;  // Downcasting
+        keyboard2.conductwork();
 
+        Headset headset = new HeadPhone();  // Upcasting
+        headset.EarOn();                   // Calls overridden method in HeadPhone
+        headset.TalkOn();                  // Calls method from Headset
 
+        HeadPhone headPhone = new HeadPhone();  // Direct object creation
+        headPhone.EarOn();                      // Calls overridden method
+        headPhone.TalkOn();                     // Inherited method
+        headPhone.Gameon();                     // Unique method
 
+        HeadPhone headPhone2 = (HeadPhone) headset;  // Downcasting
+        headPhone2.Gameon();                         // Access HeadPhone-specific method
+
+        Soap soap = new Pears();  // Upcasting
+        soap.Bath();             // Calls overridden method in Pears
+        soap.Clean();            // Inherited method from Soap
+
+        Pears pears = new Pears();  // Direct object creation
+        pears.Bath();               // Overridden method
+        pears.Clean();              // Inherited method
+        pears.Fresh();              // Unique method in Pears
+
+        Pears pears2 = (Pears) soap;  // Downcasting
+        pears2.Fresh();
+
+        Shampoo shampoo = new HeadCare();  // Upcasting
+        shampoo.HeadWash();               // Calls overridden method in HeadCare
+        shampoo.BodyWash();               // Inherited method from Shampoo
+
+        HeadCare headCare = new HeadCare();  // Direct object creation
+        headCare.HeadWash();                // Overridden method
+        headCare.BodyWash();                // Inherited method
+        headCare.HeadClean();              // Unique method in HeadCare
+
+        HeadCare headCare2 = (HeadCare) shampoo;  // Downcasting
+        headCare2.HeadClean();
+
+        PaperBox paperBox = new CardBoard();  // Upcasting
+        paperBox.KeepOn();                   // Calls overridden method in CardBoard
+        paperBox.ToStore();                  // Inherited method from PaperBox
+
+        CardBoard cardBoard = new CardBoard();  // Direct object creation
+        cardBoard.KeepOn();                     // Overridden method
+        cardBoard.ToStore();                    // Inherited method
+        cardBoard.PLaceIt();                    // Unique method in CardBoard
+
+        CardBoard cardBoard2 = (CardBoard) paperBox;  // Downcasting
+        cardBoard2.PLaceIt();
+
+        AirPod airPod = new Wireless();  // Upcasting
+        airPod.EarGood();               // Calls overridden method in Wireless
+        airPod.GoodSound();             // Inherited method from AirPod
+
+        Wireless wireless = new Wireless();  // Direct object creation
+        wireless.EarGood();                  // Overridden method
+        wireless.GoodSound();                // Inherited method
+        wireless.Sounds();                   // Unique method in Wireless
+
+        Wireless wireless2 = (Wireless) airPod;  // Downcasting
+        wireless2.Sounds();
     }
 }
+
+
+
+
+
+
+
+
