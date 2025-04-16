@@ -169,7 +169,7 @@ public class TypeCasting {
             }
         }
     }
-    public void Resturant(Restaurant restaurant) {
+    public void Restaurant(Restaurant restaurant) {
         if (restaurant != null) {
             restaurant.serveFood();
             if (restaurant instanceof FineDining) {
@@ -196,6 +196,52 @@ public class TypeCasting {
             }
         }
     }
+    public void Zoo(Zoo zoo) {
+        if (zoo != null) {
+            zoo.feedAnimals();
+            if (zoo instanceof SafariZone) {
+                SafariZone safariZone= (SafariZone) zoo;
+                safariZone.feedAnimals();
+            }
+        }
+    }
+    public void Room(Room room) {
+        if (room != null) {
+            room.bookRoom();
+            if (room instanceof ConferenceRoom) {
+                ConferenceRoom conferenceRoom= (ConferenceRoom) room;
+                room.bookRoom();
+            }
+        }
+    }
+    public void Destination(Destination destination) {
+        if (destination != null) {
+            destination.explore();
+            if (destination instanceof Beach) {
+                Beach beach= (Beach) destination;
+                beach.explore();
+            }
+        }
+    }
+    public void Hero(Hero hero) {
+        if (hero != null) {
+            hero.usePower();
+            if (hero instanceof SpiderMan) {
+                SpiderMan spiderMan= (SpiderMan) hero;
+                hero.usePower();
+            }
+        }
+    }
+    public void MedicalService(MedicalService medicalService) {
+        if (medicalService != null) {
+            medicalService.provideService();
+            if (medicalService instanceof Surgery) {
+                Surgery surgery= (Surgery) medicalService;
+                surgery.provideService();
+            }
+        }
+    }
+
 
 
 
