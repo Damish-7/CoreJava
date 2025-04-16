@@ -1,7 +1,11 @@
 package com.xworkz.overrided.internal;
 
 public class AirPod {
-    public AirPod() {
+    private String name;
+    private String brand;
+
+
+    public AirPod(String name,String brand ) {
         System.out.println("Airpod to ear");
     }
 
@@ -12,5 +16,10 @@ public class AirPod {
     public void GoodSound() {
         System.out.println("sound good");
     }
+    @Override
+    public String toString(){
+        return "AirPod name"+name+"Brand "+brand;
+    }
 }
+
 
