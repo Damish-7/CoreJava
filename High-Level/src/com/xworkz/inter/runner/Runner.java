@@ -238,11 +238,135 @@ public class Runner {
         myTable.adjustHeight();
 
 
+        Keyboard keyboard = new MechanicalKeyboard();       //5
+        keyboard.type();
+        keyboard.pressEnter();
+        keyboard.pressSpace();
+        keyboard.enableBacklight();
+        keyboard.disableBacklight();
+
+        MechanicalKeyboard myKeyboard = new MechanicalKeyboard();
+        myKeyboard.type();
+        myKeyboard.pressEnter();
+        myKeyboard.pressSpace();
+        myKeyboard.enableBacklight();
+        myKeyboard.disableBacklight();
+
+
+        Monitor monitor = new LEDMonitor();
+        monitor.turnOn();
+        monitor.turnOff();
+        monitor.adjustBrightness();
+        monitor.switchInput();
+        monitor.rotate();
+
+        LEDMonitor myMonitor = new LEDMonitor();
+        myMonitor.turnOn();
+        myMonitor.turnOff();
+        myMonitor.adjustBrightness();
+        myMonitor.switchInput();
+        myMonitor.rotate();
+
+
+        Mouse mouse = new WirelessMouse();
+        mouse.leftClick();
+        mouse.rightClick();
+        mouse.scroll();
+        mouse.doubleClick();
+        mouse.drag();
+
+        WirelessMouse myMouse = new WirelessMouse();
+        myMouse.leftClick();
+        myMouse.rightClick();
+        myMouse.scroll();
+        myMouse.doubleClick();
+        myMouse.drag();
+
+
+        Laptop laptop = new GamingLaptop();
+        laptop.start();
+        laptop.shutdown();
+        laptop.openLid();
+        laptop.closeLid();
+        laptop.charge();
+
+        GamingLaptop myLaptop = new GamingLaptop();
+        myLaptop.start();
+        myLaptop.shutdown();
+        myLaptop.openLid();
+        myLaptop.closeLid();
+        myLaptop.charge();
+
+
+        Watch watch1= new DigitalWatch();
+        watch1.showTime();
+        watch1.setAlarm();
+        watch1.checkDate();
+        watch1.stopwatch();
+        watch1.timer();
+
+        DigitalWatch myWatch1 = new DigitalWatch();
+        myWatch1.showTime();
+        myWatch1.setAlarm();
+        myWatch1.checkDate();
+        myWatch1.stopwatch();
+        myWatch1.timer();
+
+
+        Remote remote = new TVRemote();          //3
+        remote.turnOn();
+        remote.turnOff();
+        remote.changeChannel();
+
+        TVRemote myRemote = new TVRemote();
+        myRemote.turnOn();
+        myRemote.turnOff();
+        myRemote.changeChannel();
 
 
 
+        Charger charger = new PhoneCharger();
+        charger.plugIn();
+        charger.chargeDevice();
+        charger.unplug();
+
+        PhoneCharger myCharger = new PhoneCharger();
+        myCharger.plugIn();
+        myCharger.chargeDevice();
+        myCharger.unplug();
 
 
+        Light light = new LEDLight();
+        light.switchOn();
+        light.switchOff();
+        light.dim();
+
+        LEDLight myLight = new LEDLight();
+        myLight.switchOn();
+        myLight.switchOff();
+        myLight.dim();
+
+
+        Fridge fridge = new DoubleDoorFridge();
+        fridge.openDoor();
+        fridge.coolItems();
+        fridge.closeDoor();
+
+        DoubleDoorFridge myFridge = new DoubleDoorFridge();
+        myFridge.openDoor();
+        myFridge.coolItems();
+        myFridge.closeDoor();
+
+
+        Headphones headphones = new WirelessHeadphones();
+        headphones.playAudio();
+        headphones.pauseAudio();
+        headphones.increaseVolume();
+
+        WirelessHeadphones myHeadphones = new WirelessHeadphones();
+        myHeadphones.playAudio();
+        myHeadphones.pauseAudio();
+        myHeadphones.increaseVolume();
 
 
 
