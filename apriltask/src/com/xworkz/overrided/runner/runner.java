@@ -232,7 +232,7 @@ public class runner {
         SmartLight light2 = (SmartLight) light; // Downcasting
         light2.changeColor();
 
-        Account account = new SavingsAccount(); // Upcasting
+        Account account = new Account("anna",11); // Upcasting
         account.deposit();
 
         SavingsAccount savings = new SavingsAccount(); // Normal object
@@ -250,7 +250,7 @@ public class runner {
         DigitalLibrary digitalLibrary2 = (DigitalLibrary) digitalLibrary; // Downcasting
         digitalLibrary2.downloadBook();
 
-        Zoo zoo = new SafariZone(); // Upcasting
+        Zoo zoo = new SafariZone( ); // Upcasting
         zoo.feedAnimals();
 
         SafariZone safari = new SafariZone(); // Normal object
