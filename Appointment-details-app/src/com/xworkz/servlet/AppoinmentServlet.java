@@ -1,5 +1,4 @@
 package com.xworkz.servlet;
-
 import javax.servlet.GenericServlet;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
@@ -11,7 +10,7 @@ import java.io.PrintWriter;
 @WebServlet(urlPatterns = "/details")
 public class AppoinmentServlet extends GenericServlet {
     public AppoinmentServlet (){
-        System.out.println("AppoinmentServlet  running in tomcat");
+        System.out.println("AppointmentServlet  running in tomcat");
     }
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
@@ -23,6 +22,9 @@ public class AppoinmentServlet extends GenericServlet {
 
         String email=servletRequest.getParameter("email");
 
+        String message=servletRequest.getParameter("message");
+
+
         String age=servletRequest.getParameter("age");
 
         String gender=servletRequest.getParameter("gender");
@@ -31,14 +33,24 @@ public class AppoinmentServlet extends GenericServlet {
 
         String sickness=servletRequest.getParameter("sickness");
 
-        String mobile_no=servletRequest.getParameter("mobile_no");
+        String mobileno=servletRequest.getParameter("mobileno");
         long contact=0L;
-        if(mobile_no!=null && mobile_no!=""){
-            contact=Long.parseLong(mobile_no);
+        if(mobileno!=null && mobileno!=""){
+            contact=Long.parseLong(mobileno);
         }
         servletResponse.setContentType("text/html");
         PrintWriter writer= servletResponse.getWriter();
 
-        writer.println("<h1> Thanks" +firstname+ " for booking a slot </h1>");
+        writer.println("<h1> Thanks for booking a slot </h1>");
+        writer.println("firstname:"+firstname+"<br><br>");
+        writer.println("lastname:"+lastname+"<br><br>");
+        writer.println("email:"+email+"<br><br>");
+        writer.println("message:"+message+"<br><br>");
+        writer.println("age:"+age+"<br><br>");
+        writer.println("gender:"+gender+"<br><br>");
+        writer.println("address:"+address+"<br><br>");
+        writer.println("sicknes:"+sickness+"<br><br>");
+        writer.println("mobileno:"+mobileno+"<br><br>");
+
     }
 }
