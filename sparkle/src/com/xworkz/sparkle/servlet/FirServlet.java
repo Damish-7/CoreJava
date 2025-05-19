@@ -1,6 +1,8 @@
 
 package com.xworkz.sparkle.servlet;
 
+import Dto.FirDto;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,14 +19,19 @@ public class FirServlet extends HttpServlet {
         String location = req.getParameter("location");
         String time = req.getParameter("time");
 
+
+
+        FirDto firDto=new FirDto();
+        firDto.setfirNo(firNo);
+        firDto.setcomplaint(complaint);
+        firDto.setlocation(location);
+        firDto.settime(time);
+        System.out.println("FirDto"+firDto);
+
         System.out.println("using request dispatcher to forward the req and res to another jsp/servlet");
         RequestDispatcher requestDispatcher=
                 req.getRequestDispatcher("firSuccess.jsp");
-        req.setAttribute("message","Save Success");
-        req.setAttribute("firNo",firNo);
-        req.setAttribute("complaint",complaint);
-        req.setAttribute("location",location);
-        req.setAttribute("time",time);
+        req.setAttribute("FirDto", firDto);
         requestDispatcher.forward(req,resp);
     }
 }

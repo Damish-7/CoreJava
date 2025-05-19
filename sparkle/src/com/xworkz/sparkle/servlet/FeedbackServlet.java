@@ -1,5 +1,7 @@
 package com.xworkz.sparkle.servlet;
 
+import Dto.feedbackDto;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,14 +18,19 @@ public class FeedbackServlet extends HttpServlet {
         String suggestion = req.getParameter("suggestion");
         String gender =req.getParameter("gender");
 
+        feedbackDto FeedbackDto=new feedbackDto();
+        FeedbackDto.setFeedback(feedback);
+        FeedbackDto.setRating(rating);
+        FeedbackDto.setSuggestion(suggestion);
+        FeedbackDto.setGender(gender);
+        System.out.println("feedbackDto"+FeedbackDto);
+
         System.out.println("using request dispatcher to forward the req and res to another jsp/servlet");
         RequestDispatcher requestDispatcher=
                 req.getRequestDispatcher("feedbackSuccess.jsp");
         req.setAttribute("message","Save Success");
-        req.setAttribute("feedback",feedback);
-        req.setAttribute("rating",rating);
-        req.setAttribute("suggestion",suggestion);
-        req.setAttribute("gender",gender);
+        req.setAttribute("feedbackDto",FeedbackDto);
         requestDispatcher.forward(req,resp);
+
     }
 }

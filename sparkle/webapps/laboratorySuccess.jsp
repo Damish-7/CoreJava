@@ -40,7 +40,28 @@
 <div align="center">
     <h1>Welcome to our Website!</h1>
     <h2>Thanks ${message} testName:${testName} result:${result} technician:${technician} labId:${labId} </h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">testName</th>
+            <th scope="col">result</th>
+            <th scope="col">technician</th>
+            <th scope="col">labId</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>${LabDto.testName}</td>
+            <td>${LabDto.result}</td>
+            <td>${LabDto.technician}</td>
+            <td>${LabDto.labId}</td>
+        </tr>
 
+        </tbody>
+    </table>
+
+    <footer>Laboratory @X-workz</footer>
 </div>
 </body>
 </html>

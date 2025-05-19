@@ -1,5 +1,8 @@
 package com.xworkz.sparkle.servlet;
 
+import Dto.FirDto;
+import Dto.LabDto;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,14 +19,17 @@ public class LaboratoryServlet extends HttpServlet {
         String technician = req.getParameter("technician");
         String labId = req.getParameter("labId");
 
+        LabDto labDto=new LabDto();
+        labDto.settestName(testName);
+        labDto.setresult(result);
+        labDto.settechnician(technician);
+        labDto.setLabId(labId);
+        System.out.println("LabDto"+labDto);
+
         System.out.println("using request dispatcher to forward the req and res to another jsp/servlet");
         RequestDispatcher requestDispatcher=
-                req.getRequestDispatcher("feedbackSuccess.jsp");
-        req.setAttribute("message","Save Success");
-        req.setAttribute(" testName", testName);
-        req.setAttribute("result",result);
-        req.setAttribute("technician",technician);
-        req.setAttribute("labId",labId);
+                req.getRequestDispatcher("laboratorySuccess.jsp");
+        req.setAttribute("LabDto", labDto);
         requestDispatcher.forward(req,resp);
     }
 }

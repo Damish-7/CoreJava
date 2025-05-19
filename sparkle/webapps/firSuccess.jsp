@@ -41,6 +41,29 @@
     <h1>Welcome to our Website!</h1>
     <h2>Thanks ${message} firNo:${firNo} complaint:${complaint} location:${location:} time:${time:} </h2>
 
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">firNo</th>
+            <th scope="col">complaint</th>
+            <th scope="col">location</th>
+            <th scope="col">time</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>${FirDto.firNo}</td>
+            <td>${FirDto.complaint}</td>
+            <td>${FirDto.location}</td>
+            <td>${FirDto.time}</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+    <footer>FIR @X-workz</footer>
+
 </div>
 </body>
 </html>
