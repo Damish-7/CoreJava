@@ -41,6 +41,28 @@
     <h1>Welcome to our Website!</h1>
     <h2>Thanks ${message} licenseNo=${licenseNo} issuedDate=${issuedDate} expiryDate=${expiryDate} licenseType=${licenseType} </h2>
 
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">licenseNo </th>
+            <th scope="col">issuedDate</th>
+            <th scope="col">expiryDate</th>
+            <th scope="col">licenseType</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>${LicenseDto.licenseNo}</td>
+            <td>${LicenseDto.issuedDate}</td>
+            <td>${LicenseDto.expiryDate}</td>
+            <td>${LicenseDto.licenseType}</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+    <footer>License @X-workz</footer>
 </div>
 </body>
 </html>

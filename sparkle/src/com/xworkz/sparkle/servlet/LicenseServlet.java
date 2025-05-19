@@ -1,5 +1,8 @@
 package com.xworkz.sparkle.servlet;
 
+import Dto.LabDto;
+import Dto.LicenseDto;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,15 +19,18 @@ public class LicenseServlet extends HttpServlet {
         String expiryDate = req.getParameter("expiryDate");
         String licenseType = req.getParameter("licenseType");
 
+        LicenseDto licenseDto=new LicenseDto();
+        licenseDto.setlicenseNo(licenseNo);
+        licenseDto.setissuedDate(issuedDate);
+        licenseDto.setexpiryDate(expiryDate);
+        licenseDto.setlicenseType(licenseType);
+        System.out.println("LicenseDto"+licenseDto);
+
 
         System.out.println("using request dispatcher to forward the req and res to another jsp/servlet");
         RequestDispatcher requestDispatcher=
                 req.getRequestDispatcher("licenseSuccess.jsp");
-        req.setAttribute("message","Save Success");
-        req.setAttribute("licenseNo",licenseNo);
-        req.setAttribute("issuedDate",issuedDate);
-        req.setAttribute("expiryDate",expiryDate);
-        req.setAttribute("licenseType",licenseType);
+        req.setAttribute("LicenseDto", licenseDto);
         requestDispatcher.forward(req,resp);
     }
 }
