@@ -98,7 +98,7 @@ public class EarPhoneServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("Running doDet method in");
+        System.out.println("Running doDet method in Servlet");
         String earPhoneID = req.getParameter("phoneID");
 
         if(earPhoneID!=null){
@@ -111,7 +111,8 @@ public class EarPhoneServlet extends HttpServlet {
             Optional<EarPhoneDTO> optionalEarPhoneDTO = earPhoneService.findById(id);
             if(optionalEarPhoneDTO.isPresent())
             {
-                System.out.println("EarPhone data is found");
+                EarPhoneDTO earPhoneDTO = optionalEarPhoneDTO.get();
+                System.out.println("EarPhone data is found :"+earPhoneDTO);
             }
             else{
                 System.out.println("data not found for id :"+id);
